@@ -1,0 +1,32 @@
+{% sw_extends '@Storefront/base.html.twig' %}
+
+{% block base_main_inner %}
+    <div class="container-main container">
+        <h1>PHP-Magazin</h1>
+        {% for magazine in PHPMagazins %}
+            <table class="table table-striped product-detail-properties-table">
+                <tbody>
+                <tr class="properties-row">
+                    <th class="properties-label">Titel:</th>
+                    <td class="properties-value">{{ magazine.getTitle() }}</td>
+                </tr>
+                <tr class="properties-row">
+                    <th class="properties-label">Cover:</th>
+                    <td class="properties-value">
+                        <a href="{{ magazine.getBuyLink() }}" target="_blank">
+                            <img src="{{ magazine.getCover() }}" height="100" alt="{{ magazine.getTitle() }}"/>
+                        </a>
+                    </td>
+                </tr>
+                <tr class="properties-row">
+                    <th class="properties-label">Kauflink:</th>
+                    <td class="properties-value">
+                        <a href="{{ magazine.getBuyLink() }}" target="_blank">Kaufen</a>
+                    </td>
+                </tr>
+
+                </tbody>
+            </table>
+        {% endfor %}
+    </div>
+{% endblock %}

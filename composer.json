@@ -1,0 +1,29 @@
+{
+    "name": "swag/php-magazine",
+    "description": "PHPMagazin Example ",
+    "version": "v1.0.0",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Thomas Eiling"
+        }
+    ],
+    "require": {
+        "shopware/core": "*",
+        "shopware/storefront": "*"
+    },
+    "type": "shopware-platform-plugin",
+    "autoload": {
+        "psr-4": {
+            "Swag\\PHPMagazin\\": "src/"
+        }
+    },
+    "extra": {
+        "shopware-plugin-class": "Swag\\PHPMagazin\\PHPMagazin",
+        "copyright": "(C) Thomas Eiling",
+        "label": {
+            "de-DE": "Beispiel fürs PHP-Magazin",
+            "en-GB": "Example for PHP-Magazin"
+        }
+    }
+}
